@@ -10,8 +10,8 @@ var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
 
 // initialize some settings
-var sleep_val = 1000;
-var ystep = 371;
+var sleep_val = 333; // 1/3 a second seems like a good scroll speed
+var ystep = 371; // this value is a single press of the page down key on Chrome 51 OS X
 
 var position = {
   current : function() {
