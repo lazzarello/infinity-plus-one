@@ -6,7 +6,10 @@
 // initialize some settings
 var xstep,ystep = (0,50); // this doesn't really do what I think it does
 var sleep_val = 5000;
-var position = document.body.scrollTop;
+var position = function() {
+  return document.body.scrollTop;
+}
+
 var height = document.body.scrollHeight;
 var time = Date.now; // not used yet
 
@@ -21,8 +24,7 @@ var test_url = 'http://thelivest1.com/';
 var scrollingTo = function(height) {
   if ( height !== 'undefined' ) {
     //console.log("current height is: " + height);
-    var position = document.body.scrollTop;
-    var next_step = position + ystep;
+    var next_step = position() + ystep;
 
     if ( position <= height) {
       //console.log("next step is: " + next_step);
