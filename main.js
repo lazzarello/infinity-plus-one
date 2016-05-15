@@ -43,4 +43,4 @@ function startScrolling() {
   } 
 }
 
-window.onload =  startScrolling();
+startScrolling();
