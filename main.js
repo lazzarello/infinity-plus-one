@@ -38,7 +38,7 @@ function startScrolling() {
     }, sleep_val);
   } else {
     setTimeout(function() {
-      startScrolling
+      startScrolling();
     }, sleep_val);
   } 
 }
