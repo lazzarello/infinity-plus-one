@@ -1,6 +1,7 @@
 // infinity plus one
-// scroll from zero to infinity on any webpage
-// brillz
+// scroll from zero to infinity and beyond on any webpage
+// 
+// Decent ref on scrolling to the bottom
 // https://stackoverflow.com/questions/17540458/stack-overflow-error-in-javascript-when-recursively-scrolling-to-the-bottom-of-t
 //
 // don't really need these
