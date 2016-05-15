@@ -18,9 +18,9 @@ function startScrolling() {
       startScrolling();
     }, sleep_val);
   } else {
-   setTimeout(function() {
-    startScrolling
-   }, sleep_val);
+    setTimeout(function() {
+      startScrolling
+    }, sleep_val);
   } 
 }
 ```
