@@ -1,6 +1,8 @@
 // infinity plus one
 // scroll from zero to infinity on any webpage
-
+// brillz
+// https://stackoverflow.com/questions/17540458/stack-overflow-error-in-javascript-when-recursively-scrolling-to-the-bottom-of-t
+//
 // initialize some settings
 var position = document.body.scrollTop;
 var xstep,ystep = (0,50); // this doesn't really do what I think it does
