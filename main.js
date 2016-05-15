@@ -30,8 +30,8 @@ var position = {
 
 // perhaps a for loop here which passes the incremented value to scrollTo()
 
-for( i = 0; i < position.height(); i++) {
-  setTimeout(document.body.scrollTo(0,position.next(), sleep_val));
+for( i = 0; i <= position.height(); i++) {
+  setTimeout(document.body.scrollTo(0,position.next()), sleep_val);
 }
 
 var scrollingTo = function(position.next) {
@@ -44,18 +44,8 @@ var scrollingTo = function(position.next) {
   }
 }
 
-var bottom = function() {
-  for ( i = next_step; i < height; i++) {
-    document.body.scrollTo(0, i);
-  }
-}
-
 function init() {
   scrollingTo();
 }
 
 window.onload = init;
-
-//body.offsetHeight()
-//body.offsetWidth()
-//body.clientHeight()
