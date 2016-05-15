@@ -30,17 +30,14 @@ var position = {
 
 // perhaps a for loop here which passes the incremented value to scrollTo()
 
-for( i = 0; i <= position.height(); i++) {
-  setTimeout(document.body.scrollTo(0,position.next()), sleep_val);
-}
+//for( i = 0; i <= position.height(); i++) {
+//  setTimeout(document.body.scrollTo(0,position.next()), sleep_val);
+//}
 
-var scrollingTo = function(position.next) {
-  if ( height() !== 'undefined' ) {
-    if ( position.current() <= height()) {
-      console.log(position.next());
-      document.body.scrollTo(0,position.next());
-      setTimeout(scrollingTo(height), sleep_val);
-    } 
+function startScrolling() {
+  if ( position.height() !== 'undefined' || position.current() < position.height() ) {
+    position.scrollToNext();
+    setTimeout(startScrolling(), sleep_val);
   }
 }
 
