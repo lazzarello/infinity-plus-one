@@ -6,6 +6,7 @@ var height = document.body.scrollHeight();
 var xstep,ystep = (0,50); // this doesn't really do what I think it does
 var position = bartop;
 var sleep_val = 500;
+var gold_middle_finger = 63667;
 
 //body.offsetHeight()
 //body.offsetWidth()
