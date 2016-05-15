@@ -18,7 +18,6 @@ function scrollingTo(next_step) {
   position = document.body.scrollTop;
   next_step = position + ystep;
   scrollingTo(next_step);
-  sleep(sleep_val);
 }
 
 // or like this
