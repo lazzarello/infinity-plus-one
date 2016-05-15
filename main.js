@@ -23,18 +23,20 @@ function scrollingTo(next_step) {
 
 // or like this
 
-while (true) {
+//while (true) {
   // scroll stuff
-  sleep(sleep_val);
-}
+//  sleep(sleep_val);
+//}
 
+// or use setTimeout(function, sleep_val);
+//
 // start scrolling function
 var startScroll = function() {
   scrollingTo(next_step);
 }
 
 // invoke the function to start scrolling
-startScroll();
+setTimeout(startScroll, sleep_val);
 
 //body.offsetHeight()
 //body.offsetWidth()
