@@ -18,7 +18,7 @@ var test_url = 'http://thelivest1.com/';
 // recursive function to keep scrolling to the next step after sleeping for sleep_value between steps
 //console.log("current position is: " + position);
 
-function scrollingTo(height) {
+var scrollingTo = function(height) {
   if ( height !== 'undefined' ) {
     //console.log("current height is: " + height);
     var position = document.body.scrollTop;
