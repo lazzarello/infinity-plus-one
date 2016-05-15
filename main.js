@@ -8,7 +8,7 @@ var xstep,ystep = (0,50); // this doesn't really do what I think it does
 var sleep_val = 5000;
 var position = document.body.scrollTop;
 var height = document.body.scrollHeight;
-var time = 'timestamp'; // not used yet
+var time = Date.now; // not used yet
 
 // don't really need these
 var gold_middle_finger = 63667;
