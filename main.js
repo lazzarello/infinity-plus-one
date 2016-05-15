@@ -2,10 +2,9 @@
 // scroll from zero to infinity on any webpage
 
 // initialize some settings
-var bartop = document.body.scrollTop;
+var position = document.body.scrollTop;
 var height = document.body.scrollHeight;
 var xstep,ystep = (0,50); // this doesn't really do what I think it does
-var position = bartop;
 var next_step = position + ystep;
 var sleep_val = 500;
 var gold_middle_finger = 63667;
@@ -17,7 +16,7 @@ function scrollingTo(next_step) {
   document.body.scrollTo(0,next_step);
   position = document.body.scrollTop;
   next_step = position + ystep;
-  scrollingTo(next_step);
+  setTimeout(scrollingTo(next_step), sleep_val);
 }
 
 // or like this
@@ -35,7 +34,7 @@ var startScroll = function() {
 }
 
 // invoke the function to start scrolling
-setTimeout(startScroll, sleep_val);
+startScroll();
 
 //body.offsetHeight()
 //body.offsetWidth()
