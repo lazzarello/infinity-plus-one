@@ -10,7 +10,7 @@ var test_url = 'http://thelivest1.com/';
 
 // initialize some settings
 var sleep_val = 5000;
-var xstep,ystep = (0,100); // this doesn't really do what I think it does
+var xstep,ystep = (0,371); // this doesn't really do what I think it does
 
 var position = {
   current : function() {
@@ -20,7 +20,7 @@ var position = {
     return this.current() + ystep;
   },
   scrollToNext : function() {
-    document.body.scrollTo(this.next());
+    document.body.scrollTo(0,this.next());
     return this.current();
   },
   height : function() {
