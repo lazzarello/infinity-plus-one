@@ -5,7 +5,7 @@
 //
 // initialize some settings
 var sleep_val = 5000;
-var xstep,ystep = (0,50); // this doesn't really do what I think it does
+var xstep,ystep = (0,100); // this doesn't really do what I think it does
 
 var position = {
   current : function() {
