@@ -6,31 +6,34 @@
 // initialize some settings
 var sleep_val = 5000;
 var xstep,ystep = (0,50); // this doesn't really do what I think it does
+
 var position = {
   current : function() {
     return document.body.scrollTop;
   },
   next : function() {
     return this.current() + ystep;
+  },
+  scrollToNext : function() {
+    document.body.scrollTo(this.next());
+    return this.current();
+  },
+  height : function() {
+    return document.body.scrollHeight;
   }
 }
-
-var height = function() {
-  return document.body.scrollHeight;
-}
-
-var time = Date.now; // not used yet
 
 // don't really need these
 var gold_middle_finger = 63667;
 var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
 
-var scrollingTo = function(height()) {
+var scrollingTo = function(height) {
   if ( height() !== 'undefined' ) {
     if ( position.current() <= height()) {
+      console.log(position.next());
       document.body.scrollTo(0,position.next());
-      setTimeout(scrollingTo(height(), sleep_val);
+      setTimeout(scrollingTo(height), sleep_val);
     } 
   }
 }
