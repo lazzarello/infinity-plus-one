@@ -9,8 +9,10 @@ var sleep_val = 5000;
 var position = function() {
   return document.body.scrollTop;
 }
+var height = function() {
+  document.body.scrollHeight;
+}
 
-var height = document.body.scrollHeight;
 var time = Date.now; // not used yet
 
 // don't really need these
@@ -23,17 +25,17 @@ var test_url = 'http://thelivest1.com/';
 
 var scrollingTo = function(height) {
   if ( height !== 'undefined' ) {
-    //console.log("current height is: " + height);
+    console.log("current height is: " + height);
     var next_step = position() + ystep;
 
     if ( position <= height) {
-      //console.log("next step is: " + next_step);
+      console.log("next step is: " + next_step);
       document.body.scrollTo(0,next_step);
-      //console.log("scrolled to next step: " + next_step);
+      console.log("scrolled to next step: " + next_step);
       position = document.body.scrollTop;
-      //console.log("current position is: " + position);
+      console.log("current position is: " + position);
       next_step = position + ystep;
-      setTimeout(scrollingTo(), sleep_val);
+      setTimeout(scrollingTo(height), sleep_val);
     } 
   }
 }
