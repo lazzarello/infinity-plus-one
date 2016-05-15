@@ -21,6 +21,13 @@ function scrollingTo(next_step) {
   sleep(sleep_val);
 }
 
+// or like this
+
+while (true) {
+  // scroll stuff
+  sleep(sleep_val);
+}
+
 // start scrolling function
 var startScroll = function() {
   scrollingTo(next_step);
