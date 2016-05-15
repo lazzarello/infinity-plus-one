@@ -36,8 +36,10 @@ var position = {
 
 function startScrolling() {
   if ( position.height() !== 'undefined' || position.current() < position.height() ) {
-    position.scrollToNext();
-    setTimeout(startScrolling(), sleep_val);
+    setTimeout(function() {
+      position.scrollToNext();
+      startScrolling();
+    }, sleep_val);
   }
 }
 
