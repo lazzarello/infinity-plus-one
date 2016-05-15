@@ -10,8 +10,8 @@ var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
 
 // initialize some settings
-var sleep_val = 5000;
-var xstep,ystep = (0,371); // this doesn't really do what I think it does
+var sleep_val = 1000;
+var ystep = 371;
 
 var position = {
   current : function() {
