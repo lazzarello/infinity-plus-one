@@ -29,23 +29,18 @@ var position = {
   }
 }
 
-// perhaps a for loop here which passes the incremented value to scrollTo()
-
-//for( i = 0; i <= position.height(); i++) {
-//  setTimeout(document.body.scrollTo(0,position.next()), sleep_val);
-//}
-
 function startScrolling() {
+  // if we can scroll some more, scroll to next, if we can't, try again.
   if ( position.height() !== 'undefined' || position.current() < position.height() ) {
     setTimeout(function() {
       position.scrollToNext();
       startScrolling();
     }, sleep_val);
-  }
+  } else {
+   setTimeout(function() {
+    startScrolling
+   }, sleep_val);
+  } 
 }
 
-function init() {
-  scrollingTo();
-}
-
-window.onload = init;
+window.onload =  startScrolling();
