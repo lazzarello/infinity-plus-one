@@ -3,6 +3,11 @@
 // brillz
 // https://stackoverflow.com/questions/17540458/stack-overflow-error-in-javascript-when-recursively-scrolling-to-the-bottom-of-t
 //
+// don't really need these
+var gold_middle_finger = 63667;
+var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
+var test_url = 'http://thelivest1.com/';
+
 // initialize some settings
 var sleep_val = 5000;
 var xstep,ystep = (0,100); // this doesn't really do what I think it does
@@ -23,12 +28,8 @@ var position = {
   }
 }
 
-// don't really need these
-var gold_middle_finger = 63667;
-var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
-var test_url = 'http://thelivest1.com/';
-
-var scrollingTo = function(height) {
+// perhaps a for loop here which passes the incremented value to scrollTo()
+var scrollingTo = function(position.next) {
   if ( height() !== 'undefined' ) {
     if ( position.current() <= height()) {
       console.log(position.next());
