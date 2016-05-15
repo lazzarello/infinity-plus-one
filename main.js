@@ -4,15 +4,20 @@
 // https://stackoverflow.com/questions/17540458/stack-overflow-error-in-javascript-when-recursively-scrolling-to-the-bottom-of-t
 //
 // initialize some settings
-var xstep,ystep = (0,50); // this doesn't really do what I think it does
 var sleep_val = 5000;
-var position = function() {
-  return document.body.scrollTop;
-}
-var height = function() {
-  document.body.scrollHeight;
+var xstep,ystep = (0,50); // this doesn't really do what I think it does
+var position = {
+  current : function() {
+    return document.body.scrollTop;
+  },
+  next : function() {
+    return this.current() + ystep;
+  }
 }
 
+var height = function() {
+  return document.body.scrollHeight;
+}
 var time = Date.now; // not used yet
 
 // don't really need these
@@ -28,14 +33,14 @@ var scrollingTo = function(height) {
     console.log("current height is: " + height);
     var next_step = position() + ystep;
 
-    if ( position <= height) {
+    if ( position <= height()) {
       console.log("next step is: " + next_step);
       document.body.scrollTo(0,next_step);
       console.log("scrolled to next step: " + next_step);
       position = document.body.scrollTop;
       console.log("current position is: " + position);
       next_step = position + ystep;
-      setTimeout(scrollingTo(height), sleep_val);
+      setTimeout(scrollingTo(height()), sleep_val);
     } 
   }
 }
