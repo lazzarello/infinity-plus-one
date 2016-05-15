@@ -18,6 +18,7 @@ var position = {
 var height = function() {
   return document.body.scrollHeight;
 }
+
 var time = Date.now; // not used yet
 
 // don't really need these
@@ -25,22 +26,11 @@ var gold_middle_finger = 63667;
 var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
 
-// recursive function to keep scrolling to the next step after sleeping for sleep_value between steps
-//console.log("current position is: " + position);
-
-var scrollingTo = function(height) {
-  if ( height !== 'undefined' ) {
-    console.log("current height is: " + height);
-    var next_step = position() + ystep;
-
-    if ( position <= height()) {
-      console.log("next step is: " + next_step);
-      document.body.scrollTo(0,next_step);
-      console.log("scrolled to next step: " + next_step);
-      position = document.body.scrollTop;
-      console.log("current position is: " + position);
-      next_step = position + ystep;
-      setTimeout(scrollingTo(height()), sleep_val);
+var scrollingTo = function(height()) {
+  if ( height() !== 'undefined' ) {
+    if ( position.current() <= height()) {
+      document.body.scrollTo(0,position.next());
+      setTimeout(scrollingTo(height(), sleep_val);
     } 
   }
 }
