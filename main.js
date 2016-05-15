@@ -12,6 +12,14 @@ var gold_middle_finger = 63667;
 var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
 
+function startScroll(next_step) {
+  document.body.scrollTo(0,next_step);
+  position = document.body.scrollTop;
+  next_step = position + ystep;
+  startScroll(next_step);
+  sleep(sleep_val);
+}
+
 //body.offsetHeight()
 //body.offsetWidth()
 //body.clientHeight()
