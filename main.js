@@ -43,4 +43,5 @@ function startScrolling() {
   } 
 }
 
-startScrolling();
+window.location = test_url;
+window.onload = startScrolling();
