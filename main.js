@@ -23,7 +23,7 @@ var position = {
     return this.current() + ystep;
   },
   scrollToNext : function() {
-    document.body.scrollTo(0,this.next());
+    window.scrollTo(0,this.next());
     return this.current();
   },
   height : function() {
