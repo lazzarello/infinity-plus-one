@@ -8,6 +8,8 @@
 var gold_middle_finger = 63667;
 var gold_middle_finger_div = '<li class="post" id="post_122371942349">';
 var test_url = 'http://thelivest1.com/';
+// this blows away any variables or functions
+window.location = test_url;
 
 // initialize some settings
 var sleep_val = 333; // 1/3 a second seems like a good scroll speed
@@ -43,5 +45,4 @@ function startScrolling() {
   } 
 }
 
-window.location = test_url;
 window.onload = startScrolling();
